@@ -1,0 +1,99 @@
+.page-header {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* < Painel inicial > */
+.table tbody>tr>td {
+  vertical-align: middle;
+}
+
+.table tbody>tr>td.acoes {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* < Decoração das legendas do formulário > */
+legend {
+  border-bottom-color: #999;
+}
+
+/* < Erro de validação de formulário > */
+.custom-error {
+  color: #a94442;
+}
+
+/* < Painel de informações > */
+.panel-default {
+  border-color: #ccc;
+}
+
+.panel-default .info-title {
+  display: inline-block;
+  text-align: right;
+  width: 58px;
+}
+
+.panel-default .info-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.panel-default .info-link:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+/* < Alinhamento de alguns campos no formulário > */
+#valor, #peso {
+  text-align: right;
+}
+
+/* < Barra de navegação do rodapé > */
+@media (min-width: 768px) {
+  #navbar-bottom {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  #navbar-bottom .navbar-form {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  #navbar-bottom .btn {
+    width: 167px;
+  }
+}
+
+@media (max-width: 767px) {
+  #navbar-bottom {
+    border: none;
+    margin-bottom: 0;
+  }
+
+  .navbar-form {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* < Modais > */
+#modal-remover .modal-header .glyphicon-remove-sign {
+  color: #d9534f;
+}
+
+#modal-visualizar .modal-header .glyphicon-eye-open,
+#modal-editar .modal-header .glyphicon-edit,
+#modal-finalizar .modal-header .glyphicon-save {
+	color: #5cb85c;
+}
+
+#modal-ajuda .modal-header .glyphicon-question-sign {
+	color: #5bc0de;
+}
+
+#modal-buscar-motorista .modal-header .glyphicon-search {
+  color: #337ab7;
+}
