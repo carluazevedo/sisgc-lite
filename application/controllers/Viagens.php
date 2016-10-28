@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Painel extends CI_Controller {
+class Viagens extends CI_Controller {
 
 	public $titulo = 'SisGC';
 
@@ -9,7 +9,7 @@ class Painel extends CI_Controller {
 	{
 		parent::__construct();
 		if (!$this->session->has_userdata('identity')) redirect('auth');
-		$this->load->model('painel_model');
+		$this->load->model('viagens_model');
 	}
 
 	public function index()
@@ -17,7 +17,7 @@ class Painel extends CI_Controller {
 		/* Informações para 'cabecalho.php' */
 		$data['titulo']            = $this->titulo;
 		$data['incluir_cabecalho'] = array(link_tag('styles/geral.css'));
-		$data['view']              = 'painel/inicio';
+		$data['view']              = 'viagens/painel';
 		/* Informações para 'view' */
 		$data['titulo_pagina'] = 'Viagens registradas';
 		/* Informações para 'rodape.php' */
@@ -36,7 +36,7 @@ class Painel extends CI_Controller {
 			'operacao_nome',
 			'operacao_unidade'
 		);
-		$data['registros'] = $this->painel_model->listar_registros('reg_viagens', $colunas);
+		$data['registros'] = $this->viagens_model->listar_registros('reg_viagens', $colunas);
 		/* Conclusão */
 		$this->load->view('modelos/cabecalho', $data);
 		$this->load->view('modelos/rodape', $data);

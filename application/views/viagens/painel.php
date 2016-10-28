@@ -37,10 +37,10 @@
 								?>
 								<tr>
 									<td><?php echo $reg->dt_num; ?></td>
-									    <?php echo $this->painel_model->status_viagem_tb($reg->status_viagem); ?>
-									<td><?php echo $this->painel_model->formata_data_mysql($reg->entrada_data); ?></td>
-									<td><?php echo $this->painel_model->formata_data_mysql($reg->saida_data); ?></td>
-									<td><?php echo $this->painel_model->permanencia($reg->entrada_data, $reg->saida_data); ?></td>
+									    <?php echo $this->viagens_model->status_viagem_tb($reg->status_viagem); ?>
+									<td><?php echo $this->viagens_model->formata_data_mysql($reg->entrada_data); ?></td>
+									<td><?php echo $this->viagens_model->formata_data_mysql($reg->saida_data); ?></td>
+									<td><?php echo $this->viagens_model->permanencia($reg->entrada_data, $reg->saida_data); ?></td>
 									<td><?php echo $reg->motorista_nome; ?></td>
 									<td><?php echo $reg->placa_trator; ?></td>
 									<td><?php echo $reg->placa_reboque_1; ?></td>

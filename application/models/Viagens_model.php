@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Painel_model extends CI_Model {
+class Viagens_model extends CI_Model {
 
 	public function __construct()
 	{
@@ -67,10 +67,10 @@ class Painel_model extends CI_Model {
 	{
 		if ($hora_final == 0) {
 			$hora_atual = date('Y-m-d H:i:s');
-			$perm = $this->db->query('SELECT TIMEDIFF("'.$hora_atual.'","'.$hora_inicial.'") as horas')->row();
+			$perm = $this->db->query('SELECT TIMEDIFF("'.$hora_atual.'","'.$hora_inicial.'") AS horas')->row();
 			return $perm->horas;
 		} else {
-			$perm = $this->db->query('SELECT TIMEDIFF("'.$hora_final.'","'.$hora_inicial.'") as horas')->row();
+			$perm = $this->db->query('SELECT TIMEDIFF("'.$hora_final.'","'.$hora_inicial.'") AS horas')->row();
 			return $perm->horas;
 		}
 	}

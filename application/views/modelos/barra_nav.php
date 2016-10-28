@@ -22,7 +22,7 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 								<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 
-								<?php echo $this->painel_model->usuario_atual(); ?> <span class="caret"></span>
+								<?php echo $this->viagens_model->usuario_atual(); ?> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="<?php echo site_url('auth/logout'); ?>">Desconectar</a></li>
