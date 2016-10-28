@@ -7,6 +7,7 @@ class Viagens_model extends CI_Model {
 	{
 		parent::__construct();
 		$this->load->database();
+		$this->load->config('ion_auth', TRUE);
 	}
 
 	/**
@@ -39,10 +40,14 @@ class Viagens_model extends CI_Model {
 	/* Funções para tratamento de exibição de dados */
 	public function usuario_atual()
 	{
-		$string = $this->session->userdata('identity');
-		$exploded = explode('@', $string);
-		$identidade = array_shift($exploded);
-		return $identidade;
+		if ($this->config->item('identity', 'ion_auth') == 'email') {
+			$string = $this->session->userdata('identity');
+			$exploded = explode('@', $string);
+			$identidade = array_shift($exploded);
+			return $identidade;
+		} elseif ($this->config->item('identity', 'ion_auth') == 'username') {
+			return $this->session->userdata('identity');
+		}
 	}
 
 	public function formata_data_mysql($data_mysql)
