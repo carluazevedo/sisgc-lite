@@ -7,7 +7,7 @@ class Viagens_model extends CI_Model {
 	{
 		parent::__construct();
 		$this->load->database();
-		$this->load->config('ion_auth', TRUE);
+		$this->load->config('ion_auth', true);
 	}
 
 	/**

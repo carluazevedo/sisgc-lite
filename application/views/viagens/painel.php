@@ -21,7 +21,7 @@
 								<th>REBOQUE</th>
 								<th>TRANSPORTADORA</th>
 								<th>ORIGEM</th>
-								<th colspan="3">AÇÕES</th>
+								<th colspan="2">AÇÕES</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -31,10 +31,6 @@
 							</tr>
 							<?php else : ?>
 								<?php foreach ($registros as $reg) : ?>
-								<?php
-									#$json_values = array($reg->id, $reg->status_viagem);
-									#$json_editar = json_encode($json_values);
-								?>
 								<tr>
 									<td><?php echo $reg->dt_num; ?></td>
 									    <?php echo $this->viagens_model->status_viagem_tb($reg->status_viagem); ?>
@@ -46,11 +42,6 @@
 									<td><?php echo $reg->placa_reboque_1; ?></td>
 									<td><?php echo $reg->transp_nome; ?></td>
 									<td><?php echo $reg->operacao_nome, ($reg->operacao_unidade != '') ? ' - '.$reg->operacao_unidade : '' ; ?></td>
-									<td class="acoes">
-										<button type="button" class="btn btn-sm btn-info acao-visualizar" title="Visualizar" value="<?php echo $reg->id; ?>" onclick="visualizarViagem(this)">
-											<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-										</button>
-									</td>
 									<td class="acoes">
 										<button type="button" class="btn btn-sm btn-success acao-editar" title="Editar" value="<?php echo $reg->id; ?>" onclick="editarViagem(this)">
 											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
