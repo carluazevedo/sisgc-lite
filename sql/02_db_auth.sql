@@ -90,24 +90,6 @@ INSERT INTO `auth_users` (
 	'istrator', -- last_name
 	'ADMIN', -- company
 	'0' -- phone
-),(
-	2, -- id
-	'::1', -- ip_address
-	'', -- username
-	'$2y$08$sfYETXYTdAXDLZ41eLdYTeZQI.vIcNayTYzkUU7YAyQ0nfatoO/Ry', -- password
-	'', -- salt
-	'carluazevedo@sisgc.com', -- email
-	'', -- activation_code
-	'', -- forgotten_password_code
-	'', -- forgotten_password_time
-	'', -- remember_code
-	'1473143367', -- created_on
-	'1473143435', -- last_login
-	1, -- active
-	'Carlu', -- first_name
-	'Pereira Azevedo', -- last_name
-	'CARLU INFORMATICA', -- company
-	'0' -- phone
 );
 
 DROP TABLE IF EXISTS `auth_users_groups`;

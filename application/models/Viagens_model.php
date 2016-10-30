@@ -79,4 +79,38 @@ class Viagens_model extends CI_Model {
 			return $perm->horas;
 		}
 	}
+
+	/* Funções para exibição dos dados no formulário */
+	public function inicializar_valores()
+	{
+		$valores_em_branco = array(
+				'dt_num'               => '',
+				'motorista_cpf'        => '',
+				'motorista_nome'       => '',
+				'placa_trator'         => '',
+				'placa_reboque_1'      => '',
+				'placa_reboque_2'      => '',
+				'transp_nome'          => '',
+				'transp_unidade'       => '',
+				'operacao_nome'        => '',
+				'unilever_pouso'       => '',
+				'operacao_unidade'     => '',
+				'notas_fiscais'        => '',
+				'valor'                => '000',
+				'peso'                 => '0000',
+				'ent_unic'             => '',
+				'ent_frac'             => '',
+				'transfer'             => '',
+				'circ_est'             => '',
+				'hpc'                  => '',
+				'foods'                => '',
+				'hpc_foods'            => '',
+				'destinatario_cnpj'    => '',
+				'destinatario_nome'    => '',
+				'destinatario_unidade' => '',
+				'rota'                 => '',
+				'observacoes'          => ''
+		);
+		return $valores_em_branco;
+	}
 }

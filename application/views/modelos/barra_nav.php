@@ -15,6 +15,9 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
+					<li<?php if (isset($nav_registrar)) echo ' class="active"'; ?>>
+						<a href="<?php echo (isset($nav_registrar)) ? '#' : site_url('viagens/registrar'); ?>">Registrar viagem</a>
+					</li>
 				</ul>
 
 				<div class="navbar-right">
