@@ -10,6 +10,15 @@ class Viagens_model extends CI_Model {
 		$this->load->config('ion_auth', true);
 	}
 
+	public function registrar($tabela, $dados)
+	{
+		$this->db->insert($tabela, $dados);
+		if ($this->db->affected_rows() == '1') {
+			return true;
+		}
+		return false;
+	}
+
 	/**
 	 * Listar Registros
 	 *
@@ -68,6 +77,17 @@ class Viagens_model extends CI_Model {
 		return $status_retorno.PHP_EOL;
 	}
 
+	public function ultimo_id()
+	{
+		if ($this->db->insert_id() != 0) {
+			return $this->db->insert_id();
+		} else {
+			$query = $this->db->query('SELECT LAST_INSERT_ID()');
+			$row = $query->row_array();
+			return $row['LAST_INSERT_ID()'];
+		}
+	}
+
 	public function permanencia($hora_inicial, $hora_final)
 	{
 		if ($hora_final == 0) {
@@ -94,6 +114,7 @@ class Viagens_model extends CI_Model {
 				'transp_unidade'       => '',
 				'operacao_nome'        => '',
 				'unilever_pouso'       => '',
+				'unilever_louv'        => '',
 				'operacao_unidade'     => '',
 				'notas_fiscais'        => '',
 				'valor'                => '000',

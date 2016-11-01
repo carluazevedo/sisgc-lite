@@ -52,7 +52,10 @@ class Viagens extends CI_Controller {
 		$data['nav_registrar'] = true;
 		$data['operacao']      = 'registrar';
 		/* Informações para 'rodape.php' */
-		$data['incluir_rodape'] = array('<script src="'.base_url('scripts/jquery-mask/jquery.mask.min.js').'"></script>');
+		$data['incluir_rodape'] = array(
+			'<script src="'.base_url('scripts/jquery-mask/jquery.mask.min.js').'"></script>',
+			'<script src="'.base_url('scripts/formulario.js').'"></script>'
+		);
 		/* Lógica do controlador */
 		$dados = $this->viagens_model->inicializar_valores();
 		$dados_length = count($dados);

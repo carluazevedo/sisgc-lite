@@ -103,21 +103,25 @@
 
 					<fieldset id="motorista">
 						<legend>Motorista</legend>
-							<div class="form-group row">
+							<div class="form-group">
 								<label for="motorista_cpf" class="col-sm-2 control-label">CPF</label>
-								<div class="col-sm-4 col-md-3">
+								<div class="col-sm-3">
 									<input type="text" name="motorista_cpf" id="motorista_cpf" class="form-control input-sm" maxlength="14" value="<?php echo set_value('motorista_cpf', $motorista_cpf); ?>" />
 								</div>
-
-								<label for="motorista_nome" class="control-label sr-only">Nome</label>
-								<div class="col-sm-4 col-md-3">
-									<input type="text" name="motorista_nome" id="motorista_nome" class="form-control input-sm" placeholder="Nome" value="<?php echo set_value('motorista_nome', $motorista_nome); ?>" />
-								</div>
-								<div class="col-sm-4 col-md-3 custom-error">
+								<div class="col-sm-5 col-md-4 custom-error">
 									<?php echo form_error('motorista_cpf'),PHP_EOL; ?>
+								</div>
+							</div><!-- /.form-group -->
+
+							<div class="form-group">
+								<label for="motorista_nome" class="col-sm-2 control-label">Nome</label>
+								<div class="col-sm-3">
+									<input type="text" name="motorista_nome" id="motorista_nome" class="form-control input-sm" value="<?php echo set_value('motorista_nome', $motorista_nome); ?>" />
+								</div>
+								<div class="col-sm-5 col-md-4 custom-error">
 									<?php echo form_error('motorista_nome'),PHP_EOL; ?>
 								</div>
-							</div><!-- /.form-group .row -->
+							</div><!-- /.form-group -->
 					</fieldset><!-- Motorista -->
 
 					<fieldset id="veiculo">
@@ -142,13 +146,7 @@
 							</div>
 						</div><!-- /.form-group -->
 
-						<div class="form-group" id="informar-reboque-2">
-							<div class="col-sm-offset-2 col-sm-3 col-md-2">
-								<button type="button" class="btn btn-primary btn-sm btn-block" id="botao-reboque-2">Informar reboque 2</button>
-							</div>
-						</div><!-- /.form-group -->
-
-						<div class="form-group" id="reboque-2" hidden>
+						<div class="form-group" id="reboque-2">
 							<label for="placa_reboque_2" class="col-sm-2 control-label">Reboque 2</label>
 							<div class="col-sm-3">
 								<input type="text" name="placa_reboque_2" id="placa_reboque_2" class="form-control input-sm" value="<?php echo set_value('placa_reboque_2', $placa_reboque_2); ?>" />
@@ -178,9 +176,9 @@
 								<select name="operacao_nome" id="operacao_nome" class="form-control input-sm">
 									<option value=""></option>
 									<option value="unilever_pouso" <?php echo set_select('operacao_nome', 'unilever_pouso', $unilever_pouso); ?>>UNILEVER - POUSO ALEGRE/MG</option>
+									<option value="unilever_louv" <?php echo set_select('operacao_nome', 'unilever_louv', $unilever_louv); ?>>UNILEVER - LOUVEIRA/SP</option>
 								</select>
 							</div>
-
 							<div class="col-sm-4 col-md-3 custom-error">
 								<?php echo form_error('operacao_nome'),PHP_EOL; ?>
 							</div>
