@@ -2,7 +2,7 @@
 	<nav class="navbar navbar-inverse navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="<?php echo site_url(); ?>">SisGC</a>
+				<a class="navbar-brand" href="<?php echo site_url(); ?>"><?php echo $this->titulo; ?></a>
 			</div>
 		</div>
 	</nav>

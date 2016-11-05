@@ -11,6 +11,7 @@
 .table tbody>tr>td.acoes {
   padding-right: 0;
   padding-left: 0;
+  width: 35px;
 }
 
 /* < Decoração das legendas do formulário > */

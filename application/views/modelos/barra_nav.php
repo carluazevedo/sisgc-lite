@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo site_url(); ?>">SisGC</a>
+				<a class="navbar-brand" href="<?php echo site_url(); ?>"><?php echo $this->titulo; ?></a>
 			</div><!-- .navbar-header -->
 
 			<!-- Collect the nav links, forms, and other content for toggling -->

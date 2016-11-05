@@ -116,9 +116,7 @@ CREATE TABLE `auth_users_groups` (
 
 INSERT INTO `auth_users_groups` (`id`, `user_id`, `group_id`) VALUES
 	(1,1,1),
-	(2,1,2),
-	(3,2,1),
-	(4,2,2);
+	(2,1,2);
 
 DROP TABLE IF EXISTS `auth_login_attempts`;
 
