@@ -12,7 +12,7 @@
 		<h1>Sistema de Gestão de Cargas</h1>
 		<form action="" method="post" accept-charset="utf-8">
 			<label for="identity" class="control-label sr-only">Usuário</label>
-			<input type="text" id="identity" name="identity" class="form-control" value="<?php echo set_value('identity'); ?>" placeholder="Usuário" autofocus />
+			<input type="text" id="identity" name="identity" class="form-control" value="<?php echo set_value('identity'); ?>" placeholder="Usuário" />
 			<label for="password" class="control-label sr-only">Senha</label>
 			<input type="password" id="password" name="password" class="form-control" placeholder="Senha" />
 
